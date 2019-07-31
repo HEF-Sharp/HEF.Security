@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HEF.Security.Cryptography", "src\HEF.Security.Cryptography\HEF.Security.Cryptography.csproj", "{DE3C5A5E-B57D-4ECE-860E-C50F83685861}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HEF.Security.BouncyCastle", "src\HEF.Security.BouncyCastle\HEF.Security.BouncyCastle.csproj", "{932B0DE8-7CA6-454D-B34D-C21C4D64E193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DE3C5A5E-B57D-4ECE-860E-C50F83685861}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE3C5A5E-B57D-4ECE-860E-C50F83685861}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE3C5A5E-B57D-4ECE-860E-C50F83685861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932B0DE8-7CA6-454D-B34D-C21C4D64E193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932B0DE8-7CA6-454D-B34D-C21C4D64E193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932B0DE8-7CA6-454D-B34D-C21C4D64E193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932B0DE8-7CA6-454D-B34D-C21C4D64E193}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
