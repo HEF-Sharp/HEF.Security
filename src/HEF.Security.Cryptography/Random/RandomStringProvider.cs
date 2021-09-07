@@ -8,14 +8,14 @@ namespace HEF.Security.Cryptography
     /// </summary>
     public class RandomStringProvider
     {
-        private readonly IRandomProvider _randomProvider;
-
         public const string Characters = "abcdefghijklmnopqrstuvwxyz0123456789";
 
         public RandomStringProvider(IRandomProvider randomProvider)
         {
-            _randomProvider = randomProvider ?? throw new ArgumentNullException(nameof(randomProvider));
+            RandomProvider = randomProvider ?? throw new ArgumentNullException(nameof(randomProvider));
         }
+
+        public IRandomProvider RandomProvider { get; }
 
         /// <summary>
         /// 返回纯数字 字符串
@@ -28,7 +28,7 @@ namespace HEF.Security.Cryptography
 
             for (int i = 0; i < length; i++)
             {
-                sb.Append(_randomProvider.Next(10).ToString());
+                sb.Append(RandomProvider.Next(10).ToString());
             }
 
             return sb.ToString();
@@ -45,7 +45,7 @@ namespace HEF.Security.Cryptography
 
             for (int i = 0; i < length; i++)
             {
-                sb.Append(Characters[_randomProvider.Next(26)]);
+                sb.Append(Characters[RandomProvider.Next(26)]);
             }
 
             return sb.ToString();
@@ -63,7 +63,7 @@ namespace HEF.Security.Cryptography
 
             for (int i = 0; i < length; i++)
             {
-                sb.Append(Characters[_randomProvider.Next(charLength)]);
+                sb.Append(Characters[RandomProvider.Next(charLength)]);
             }
 
             return sb.ToString();
